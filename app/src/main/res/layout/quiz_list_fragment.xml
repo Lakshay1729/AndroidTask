@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="4dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:layout_marginVertical="4dp"
+    android:layout_marginHorizontal="4dp"
+    android:weightSum="7"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginVertical="2dp"
+        android:layout_weight="2.7"
+        android:src="@android:drawable/radiobutton_on_background"
+        app:tint="#11aa99">
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:weightSum="8"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_weight="1.6"
+            android:textStyle="bold"
+            android:id="@+id/daily_quiz"
+            android:gravity="center"
+            android:textColor="#292A2B"
+            android:text="Daily Quiz 703">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_weight="1.6"
+            android:letterSpacing=".2"
+            android:gravity="center"
+            android:id="@+id/miscellaneous"
+            android:text="Miscellaneous">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_weight="1.6"
+            android:id="@+id/unattempted"
+            android:gravity="center"
+            android:text="Unattempted">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:gravity="center"
+            android:id="@+id/duration"
+            android:layout_weight="1.6"
+            android:text="Duration 30 mins">
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1.8"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Over"
+            android:id="@+id/text_over"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </TextView>
+
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

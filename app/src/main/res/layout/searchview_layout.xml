@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:attv="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/search_view_drawable"
+     android:orientation="horizontal"
+    android:weightSum="7"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:background="#F67F51"
+        android:layout_marginVertical="3dp">
+
+    </androidx.appcompat.widget.AppCompatSpinner>
+    <com.dragankrstic.autotypetextview.AutoTypeTextView
+        android:id="@+id/lblTextWithoutMistakes"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        attv:animateTextTypeWithoutMistakes="Solutions Live Classes"
+        />
+</LinearLayout>

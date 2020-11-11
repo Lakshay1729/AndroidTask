@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff"
+    tools:context="com.example.androidtask.MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:attv="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+              android:layout_marginEnd="6dp"
+                android:layout_weight="5"
+                android:theme="@style/AppTheme"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/search_view_drawable"
+                attv:queryHint="Search For Courses"
+                android:layout_marginRight="6dp">
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    xmlns:attv="http://schemas.android.com/apk/res-auto"
+                    android:background="@drawable/search_view_drawable"
+                    android:orientation="horizontal"
+                    android:weightSum="7"
+                    android:theme="@style/AppTheme"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:background="#F67F51"
+                        android:layout_marginVertical="3dp">
+
+                    </androidx.appcompat.widget.AppCompatSpinner>
+                    <com.dragankrstic.autotypetextview.AutoTypeTextView
+                        android:id="@+id/lblTextWithoutMistakes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        attv:animateTextTypeWithoutMistakes="Solutions Live Classes"
+                        />
+                </LinearLayout>
+            </androidx.appcompat.widget.SearchView>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:id="@+id/container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:navGraph="@navigation/nav_graph"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#FFFFFF"
+        app:itemIconTint="@color/colorstates"
+        app:itemTextColor="@color/colorstates"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="auto"
+        app:layout_anchor="@id/bottom_navigation"
+        app:layout_anchorGravity="center|top"
+        android:id="@+id/camera_button"
+        app:elevation="5dp"
+        android:scaleType="fitCenter"
+        android:foregroundTint="@color/colorstates"
+        android:foreground="@drawable/baseline_camera_black_48"
+        app:backgroundTint="#FFFFFF"
+        >
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
